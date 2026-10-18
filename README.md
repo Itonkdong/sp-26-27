@@ -1,43 +1,48 @@
 # Structural Programming — 2026/2027
 
-Classroom exercises in C++. Each exercise file contains the task statement, the required include and namespace declaration, and an empty `main` with a TODO for your implementation.
+Course materials and C++ exercises for Structural Programming.
 
 ## Start an exercise
 
-1. Open the course folder in CLion and find the session's `starters` folder, for example `aud/aud2/starters/`.
-2. Copy that folder next to the original and name your copy `practice`. You can also create a `practice` folder and copy just the exercise file you want to work on.
-3. Open an exercise such as `ex1.cpp`, read the task at the top, and write your solution inside `main`.
-4. Reload CMake if prompted, select your file's target (for example `aud_aud2_practice_ex1`), and run it.
+1. Open the course folder in CLion and find the session you want to work on under `aud/`.
+2. Copy its `starters` folder next to the original and give your copy any name you like. You can also create a folder and copy just the exercise files you need.
+3. Select your working folder in CMake as described below.
+4. Read the task statement in an exercise file, implement the TODO, select the matching target, and run it.
 
-No package declarations or extra supporting files are needed. The `solved` files begin with the same empty scaffold and are completed during class.
+The `solved` files are completed during class; they initially contain the same unfinished scaffolds as `starters`.
 
-You can also compile and run your working copy from the course root:
+## Choose where to work with CMake
 
-```sh
-c++ -std=c++20 aud/aud2/practice/ex1.cpp -o /tmp/sp-aud2-ex1
-/tmp/sp-aud2-ex1
+At the top of `CMakeLists.txt`, change these two settings to match the folder you are working in:
+
+```cmake
+set(ACTIVE_AUD "<session>")
+set(ACTIVE_FOLDER "<folder>")
 ```
 
-Compile each file separately: every `exN.cpp` is its own program. The starter programs compile but do not read input or print output until you add your solution.
+Replace `<session>` with the exact session folder name under `aud/` and `<folder>` with the name of the subfolder you want to work in. This can be `starters`, `solved`, or any folder you create. Together, these settings select `aud/<session>/<folder>/`, which must exist and contain your exercise files.
+
+Reload CMake in CLion after changing either setting. Only `.cpp` files directly inside the selected folder appear as executable targets. Switch these settings whenever you move to another session or folder.
+
+Each exercise file is a separate program. Compile and run one file at a time. To run a file directly from the terminal, replace `path/to/exercise.cpp` with its path from the course root:
+
+```sh
+c++ -std=c++20 path/to/exercise.cpp -o /tmp/sp-exercise
+/tmp/sp-exercise
+```
 
 ## Organization
 
 ```text
 aud/
-├── aud1/                  Earlier classroom examples
-├── aud2/
-│   ├── starters/
-│   │   ├── ex1.cpp
-│   │   ├── ex2.cpp
-│   │   └── ...            Exercises 1–12 in presentation order
-│   └── solved/
-│       ├── ex1.cpp
-│       ├── ex2.cpp
-│       └── ...            Code developed during class
-└── presentations/         Original task statements and worked examples
+├── <session>/
+│   ├── starters/          Task statements and unfinished exercises
+│   ├── solved/            Code developed during class
+│   └── <your-folder>/     Your working copies; choose any name
+└── presentations/         Task statements and worked examples
 ```
 
-Each organized session has a `starters` folder and a `solved` folder, with one `exN.cpp` file per exercise. The tasks for `aud2` come from the [Exercises section of presentation 2](aud/presentations/2.html#exercises).
+Exercise files are numbered in presentation order. Refer to the corresponding presentation for the session's material. Some earlier materials may retain their original layout.
 
 ## Credits
 
