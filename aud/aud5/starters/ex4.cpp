@@ -9,12 +9,13 @@
  *
  * Examples
  * --------
- * 4031: 4 = 0 + 3 + 1
- * 5131: 5 = 1 + 3 + 1
+ *     4031: 4 = 0 + 3 + 1
+ *     5131: 5 = 1 + 3 + 1
  *
  * Input and Output
  * ----------------
- * No input is read. Print all matching four-digit numbers.
+ * No input is read.
+ * Print all matching four-digit numbers.
  *
  * Source
  * ------

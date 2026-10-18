@@ -4,14 +4,17 @@
  *
  * Description
  * -----------
- * Write a program that reads an uppercase letter from the standard input and
- * prints the same letter as lowercase. - Note: Each character is represented
- * by an ASCII number.
+ * Write a program that reads an uppercase letter from standard input and
+ * prints the same letter as lowercase.
  *
  * Input and Output
  * ----------------
- * Read an uppercase letter and print it together with its lowercase
- * equivalent.
+ * Read an uppercase letter and print it
+ * together with its lowercase equivalent.
+ *
+ * Notes
+ * -----
+ * Each character is represented by an ASCII number.
  *
  * Source
  * ------

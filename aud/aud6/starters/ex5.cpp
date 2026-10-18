@@ -4,8 +4,9 @@
  *
  * Description
  * -----------
- * Write a program that prints all pairs of prime numbers less than 1000 that
- * differ by 2. At the end, print the number of pairs found.
+ * Write a program that prints all pairs of
+ * prime numbers less than 1000 that differ by 2.
+ * At the end, print the number of pairs found.
  *
  * Functions
  * ---------
@@ -13,8 +14,8 @@
  *
  * Input and Output
  * ----------------
- * No input is read. Print each matching pair once, followed by the total
- * number of pairs.
+ * No input is read.
+ * Print each matching pair once, followed by the total number of pairs.
  *
  * Source
  * ------

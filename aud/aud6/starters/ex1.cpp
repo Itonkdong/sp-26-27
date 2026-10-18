@@ -4,19 +4,20 @@
  *
  * Description
  * -----------
- * Write separate functions that calculate the diameter, perimeter, and area
- * of a circle. Each function receives the radius as its argument.
+ * Write separate functions that calculate the
+ * diameter, perimeter, and area of a circle.
+ * Each function receives the radius as its argument.
  *
  * Functions
  * ---------
  * Call the three functions from the program to calculate the measurements
- * for a radius entered from the keyboard. The supplied source uses pi =
- * 3.14.
+ * for a radius entered from the keyboard.
+ * The supplied source uses pi = 3.14.
  *
  * Input and Output
  * ----------------
- * Read the radius R. Print the diameter, perimeter, and area of the
- * corresponding circle.
+ * Read the radius R.
+ * Print the diameter, perimeter, and area of the corresponding circle.
  *
  * Source
  * ------

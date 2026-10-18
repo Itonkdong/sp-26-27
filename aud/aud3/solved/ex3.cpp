@@ -9,19 +9,19 @@
  *
  * Grading Table
  * -------------
- * Points     Grade
- * 0-50       5
- * 51-60      6
- * 61-70      7
- * 71-80      8
- * 81-90      9
- * 91-100     10
+ *     Points     Grade
+ *     0-50       5
+ *     51-60      6
+ *     61-70      7
+ *     71-80      8
+ *     81-90      9
+ *     91-100     10
  *
  * Input and Output
  * ----------------
- * Read an integer number of points. For a value from 0 to 100, print the
- * corresponding grade. Otherwise, print a message that the number of points
- * is invalid.
+ * Read an integer number of points.
+ * For a value from 0 to 100, print the corresponding grade.
+ * Otherwise, print a message that the number of points is invalid.
  *
  * Source
  * ------

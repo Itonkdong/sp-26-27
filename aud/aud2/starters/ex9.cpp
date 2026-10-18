@@ -4,12 +4,13 @@
  *
  * Description
  * -----------
- * Write a program that reads the price of a product from the keyboard and then
- * prints its price with added value-added tax (VAT).
+ * Write a program that reads the price of a product from the keyboard and
+ * then prints its price with added value-added tax (VAT).
  *
  * Input and Output
  * ----------------
- * Read the initial product price. Print the total price including 18% VAT.
+ * Read the initial product price.
+ * Print the total price including 18% VAT.
  *
  * Notes
  * -----

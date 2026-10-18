@@ -4,13 +4,13 @@
  *
  * Description
  * -----------
- * Write a program that calculates the arithmetic mean of the numbers 3, 5, and
- * 12.
+ * Calculate the arithmetic mean of the numbers 3, 5, and 12.
  *
  * Input and Output
  * ----------------
- * No input is read. The supplied numbers are 3, 5, and 12. Print their
- * arithmetic mean.
+ * No input is read.
+ * The supplied numbers are 3, 5, and 12.
+ * Print their arithmetic mean.
  *
  * Source
  * ------

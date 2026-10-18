@@ -4,17 +4,24 @@
  *
  * Description
  * -----------
- * Write a program that calculates y = x^n for a real number x and a natural
- * number n, where n >= 1.
+ * Write a program that calculates the following expression for a real number
+ * x and a natural number n, where n >= 1.
+ *
+ * Expression
+ * ----------
+ *     y = x^n
  *
  * Variants
  * --------
- * Practice the loop variants shown in the presentation: while, do-while, and
- * for.
+ * Practice each loop variant shown in the presentation:
+ * - while
+ * - do-while
+ * - for
  *
  * Input and Output
  * ----------------
- * Read x and n from the keyboard. Print x^n.
+ * Read x and n from the keyboard.
+ * Print x^n.
  *
  * Source
  * ------

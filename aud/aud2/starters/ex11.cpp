@@ -4,19 +4,22 @@
  *
  * Description
  * -----------
- * Write a program that reads a three-digit integer from the keyboard. The
- * program should print the most significant and least significant digits of
- * the number.
+ * Write a program that reads a three-digit integer from the keyboard.
+ * The program should print the most significant
+ * and least significant digits of the number.
  *
  * Input and Output
  * ----------------
- * Read a three-digit integer. Print its most significant and least significant
- * digits.
+ * Read a three-digit integer.
+ * Print its most significant and least significant digits.
  *
  * Example After Implementation
  * ----------------------------
- * If you enter the number 795, the program will print: The most significant
- * digit is 7, and the least significant is 5.
+ * Input:
+ *     795
+ *
+ * Output:
+ *     The most significant digit is 7, and the least significant is 5.
  *
  * Notes
  * -----

@@ -9,9 +9,9 @@
  *
  * Input and Output
  * ----------------
- * Read two integers x and y. Print their sum, difference, product, and the
- * remainder of x divided by y. Use a nonzero y when testing the remainder
- * operation.
+ * Read two integers x and y.
+ * Print their sum, difference, product, and the remainder of x divided by y.
+ * Use a nonzero y when testing the remainder operation.
  *
  * Source
  * ------

@@ -4,13 +4,13 @@
  *
  * Description
  * -----------
- * Write a program that reads a dog's age and calculates its age in human
- * years.
+ * Write a program that reads a dog's age
+ * and calculates its age in human years.
  *
  * Conversion Rules
  * ----------------
- * For the first two years, one dog year equals 10.5 human years. After that,
- * each additional dog year equals 4 human years.
+ * For the first two years, one dog year equals 10.5 human years.
+ * After that, each additional dog year equals 4 human years.
  *
  * Input and Output
  * ----------------

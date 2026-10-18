@@ -14,12 +14,13 @@
  *
  * Examples
  * --------
- * For input 573, the next larger prime is 577.
- * The difference is 577 - 573 = 4.
+ *     For input 573, the next larger prime is 577.
+ *     The difference is 577 - 573 = 4.
  *
  * Input and Output
  * ----------------
- * Read n. Print the next strictly larger prime and its difference from n.
+ * Read n.
+ * Print the next strictly larger prime and its difference from n.
  *
  * Source
  * ------

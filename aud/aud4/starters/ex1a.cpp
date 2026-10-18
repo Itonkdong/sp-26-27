@@ -8,7 +8,8 @@
  *
  * Input and Output
  * ----------------
- * No input is read. Print the calculated sum.
+ * No input is read.
+ * Print the calculated sum.
  *
  * Source
  * ------

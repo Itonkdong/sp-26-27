@@ -9,12 +9,12 @@
  *
  * Leap-Year Rule
  * --------------
- * A year is a leap year if it is divisible by 4 but not by 100, or if it is
- * divisible by 400.
+ * A year is a leap year if it is divisible by 4
+ * but not by 100, or if it is divisible by 400.
  *
  * Examples
  * --------
- * Examples of leap years: 1976, 2000, 2004, 2008, 2012.
+ *     Examples of leap years: 1976, 2000, 2004, 2008, 2012.
  *
  * Input and Output
  * ----------------

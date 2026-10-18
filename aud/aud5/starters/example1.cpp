@@ -4,13 +4,19 @@
  *
  * Description
  * -----------
- * Recreate the worked switch-case example that asks "Is SP easy to learn?
- * (y/n): " and responds to the entered character.
+ * Recreate the worked switch-case example that asks the following question
+ * and responds to the entered character.
+ *
+ * Prompt
+ * ------
+ *     "Is SP easy to learn? (y/n): "
  *
  * Input and Output
  * ----------------
- * Read a character. For y or Y, print "I think so too!". For n or N, print
- * "Really?". For any other character, print "Is this a yes or no question?".
+ * Read a character.
+ * For y or Y, print "I think so too!".
+ * For n or N, print "Really?".
+ * For any other character, print "Is this a yes or no question?".
  *
  * Source
  * ------

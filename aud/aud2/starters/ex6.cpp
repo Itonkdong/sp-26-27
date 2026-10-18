@@ -10,8 +10,9 @@
  *
  * Input and Output
  * ----------------
- * Read the radius as a decimal number. Print the perimeter and area on
- * separate lines. The source example uses 3.14 for pi.
+ * Read the radius as a decimal number.
+ * Print the perimeter and area on separate lines.
+ * The source example uses 3.14 for pi.
  *
  * Source
  * ------

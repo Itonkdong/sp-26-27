@@ -9,12 +9,15 @@
  *
  * Variants
  * --------
- * Solve the task using while, do-while, and for loops.
+ * Solve the task using each of these loop types:
+ * - while
+ * - do-while
+ * - for
  *
  * Input and Output
  * ----------------
- * Read n, followed by n integers. Print the three counts on separate lines,
- * in remainder order 0, 1, 2.
+ * Read n, followed by n integers.
+ * Print the three counts on separate lines, in remainder order 0, 1, 2.
  *
  * Source
  * ------

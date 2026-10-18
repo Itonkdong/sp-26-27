@@ -5,15 +5,17 @@
  * Description
  * -----------
  * Write a program that reads the price of a product, the number of
- * installments, and the interest rate (the interest rate is a number expressed
- * as a percentage from 0 to 100). The program should print the installment
- * amount and the total amount to be paid for the product.
+ * installments, and the interest rate (the interest rate is a number
+ * expressed as a percentage from 0 to 100).
+ * The program should print the installment amount and the total amount to be
+ * paid for the product.
  *
  * Input and Output
  * ----------------
- * Read the product price, number of installments, and interest rate in that
- * order. The interest rate is a percentage from 0 to 100. Print the
- * installment amount and total amount paid.
+ * Read the product price, number of
+ * installments, and interest rate in that order.
+ * The interest rate is a percentage from 0 to 100.
+ * Print the installment amount and total amount paid.
  *
  * Notes
  * -----

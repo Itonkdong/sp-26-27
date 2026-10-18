@@ -5,8 +5,9 @@
  * Description
  * -----------
  * Write a program that prints all four-digit natural numbers divisible by
- * the sum of the two numbers formed from their first two digits and last two
- * digits. At the end, print how many such numbers were found.
+ * the sum of the two numbers formed from
+ * their first two digits and last two digits.
+ * At the end, print how many such numbers were found.
  *
  * Functions
  * ---------
@@ -15,14 +16,14 @@
  *
  * Examples
  * --------
- * 3417 is divisible by 34 + 17.
- * 5265 is divisible by 52 + 65.
- * 6578 is divisible by 65 + 78.
+ *     3417 is divisible by 34 + 17.
+ *     5265 is divisible by 52 + 65.
+ *     6578 is divisible by 65 + 78.
  *
  * Input and Output
  * ----------------
- * No input is read. Print the matching four-digit numbers and their total
- * count.
+ * No input is read.
+ * Print the matching four-digit numbers and their total count.
  *
  * Source
  * ------

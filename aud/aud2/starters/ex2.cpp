@@ -9,7 +9,9 @@
  *
  * Input and Output
  * ----------------
- * No input is read. The supplied value of x is 7. Print x and its square.
+ * No input is read.
+ * The supplied value of x is 7.
+ * Print x and its square.
  *
  * Source
  * ------

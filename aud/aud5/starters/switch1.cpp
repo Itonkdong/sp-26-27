@@ -10,8 +10,9 @@
  *
  * Input and Output
  * ----------------
- * Read one character. Print an appropriate message identifying it as a
- * vowel, a digit, or another character.
+ * Read one character.
+ * Print an appropriate message identifying it
+ * as a vowel, a digit, or another character.
  *
  * Source
  * ------

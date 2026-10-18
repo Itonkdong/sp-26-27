@@ -4,13 +4,13 @@
  *
  * Description
  * -----------
- * Write a program that reads two numbers from the keyboard and prints their
- * maximum.
+ * Write a program that reads two numbers
+ * from the keyboard and prints their maximum.
  *
  * Variants
  * --------
- * Implement the exercise using if-else. As an alternative, solve it without
- * if-else.
+ * Implement the exercise using if-else.
+ * As an alternative, solve it without if-else.
  *
  * Input and Output
  * ----------------

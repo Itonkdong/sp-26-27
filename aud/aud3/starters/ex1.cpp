@@ -13,7 +13,8 @@
  *
  * Input and Output
  * ----------------
- * Read one character. Print the result of the requested check.
+ * Read one character.
+ * Print the result of the requested check.
  *
  * Source
  * ------

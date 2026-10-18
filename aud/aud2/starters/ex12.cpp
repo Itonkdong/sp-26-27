@@ -4,17 +4,22 @@
  *
  * Description
  * -----------
- * Write a program that reads a date in the format (ddmmyyyy) from the
- * keyboard. The program should print the day and the month of the birthdate.
+ * Write a program that reads a date in
+ * the format (ddmmyyyy) from the keyboard.
+ * The program should print the day and the month of the birthdate.
  *
  * Input and Output
  * ----------------
- * Read the birthdate as an integer in ddmmyyyy format. Print the day and month
- * separated by a dot.
+ * Read the birthdate as an integer in ddmmyyyy format.
+ * Print the day and month separated by a dot.
  *
  * Example After Implementation
  * ----------------------------
- * If you enter the number 18091992, the program will print: 18.9
+ * Input:
+ *     18091992
+ *
+ * Output:
+ *     18.9
  *
  * Notes
  * -----

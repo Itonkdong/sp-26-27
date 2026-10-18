@@ -5,18 +5,21 @@
  * Description
  * -----------
  * Write a simple calculator that reads two numbers and an operator, performs
- * the operation using switch-case, and prints the result. Support +, -, *,
- * and /.
+ * the operation using switch-case, and prints the result.
+ *
+ * Operators
+ * ---------
+ *     +, -, *, /
  *
  * Input and Output
  * ----------------
- * Read the expression in the form "num1 operator num2". Report an error for
- * division by zero or an unknown operator. Otherwise, print the expression
- * and its result.
+ * Read the expression in the form "num1 operator num2".
+ * Report an error for division by zero or an unknown operator.
+ * Otherwise, print the expression and its result.
  *
  * Output Format
  * -------------
- * num1 operator num2 = result
+ *     num1 operator num2 = result
  *
  * Source
  * ------

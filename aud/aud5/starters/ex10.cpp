@@ -5,15 +5,15 @@
  * Description
  * -----------
  * Read an unknown number of integers and find the two consecutive values
- * with the greatest sum. Stop when two negative integers are entered
- * consecutively.
+ * with the greatest sum.
+ * Stop when two negative integers are entered consecutively.
  *
  * Input and Output
  * ----------------
- * Read the sequence from the keyboard. Print the positions of the
- * consecutive values with the greatest sum, counting positions from 1, and
- * print their sum. The terminating pair of consecutive negative values ends
- * the input.
+ * Read the sequence from the keyboard.
+ * Print the positions of the consecutive values with the greatest sum,
+ * counting positions from 1, and print their sum.
+ * The terminating pair of consecutive negative values ends the input.
  *
  * Source
  * ------

@@ -9,12 +9,12 @@
  *
  * Examples
  * --------
- * Examples of palindromic numbers: 12321 and 5061605.
+ *     Examples of palindromic numbers: 12321 and 5061605.
  *
  * Input and Output
  * ----------------
- * Read the lower and upper bounds of the range. Print all matching numbers,
- * including either bound if it matches.
+ * Read the lower and upper bounds of the range.
+ * Print all matching numbers, including either bound if it matches.
  *
  * Source
  * ------

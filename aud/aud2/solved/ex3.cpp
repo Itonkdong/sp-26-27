@@ -5,12 +5,14 @@
  * Description
  * -----------
  * Write a program that, for the given sides of a triangle, prints its
- * perimeter and the square of its area. Use a = 5, b = 7.5, and c = 10.2.
+ * perimeter and the square of its area.
+ * Use a = 5, b = 7.5, and c = 10.2.
  *
  * Input and Output
  * ----------------
- * No input is read. Use the supplied side lengths and print the perimeter
- * and squared area on separate lines.
+ * No input is read.
+ * Use the supplied side lengths and print the
+ * perimeter and squared area on separate lines.
  *
  * Source
  * ------

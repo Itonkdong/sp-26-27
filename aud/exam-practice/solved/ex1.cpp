@@ -4,23 +4,23 @@
  *
  * Description
  * -----------
- * In Morse code, characters are represented by dots and dashes. Read a
- * natural number N, where N < 100000, followed by N natural numbers. For
- * each number, print its remainder when divided by 5 in Morse code.
+ * In Morse code, characters are represented by dots and dashes.
+ * Read a natural number N, where N < 100000, followed by N natural numbers.
+ * For each number, print its remainder when divided by 5 in Morse code.
  *
  * Morse Code
  * ----------
- * Digit     Representation
- * 0         -----
- * 1         .----
- * 2         ..---
- * 3         ...--
- * 4         ....-
+ *     Digit     Representation
+ *     0         -----
+ *     1         .----
+ *     2         ..---
+ *     3         ...--
+ *     4         ....-
  *
  * Input and Output
  * ----------------
- * Read N and then N natural numbers. Print each remainder in Morse code on a
- * separate line.
+ * Read N and then N natural numbers.
+ * Print each remainder in Morse code on a separate line.
  *
  * Source
  * ------
