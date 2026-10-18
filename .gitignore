@@ -1,0 +1,21 @@
+# Private classroom materials
+/aud/**/old/
+/aud/**/prep/
+
+# CMake and local build output
+/cmake-build-*/
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.o
+*.obj
+*.exe
+*.out
+*.dSYM/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
