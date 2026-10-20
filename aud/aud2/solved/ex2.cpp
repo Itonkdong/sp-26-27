@@ -23,5 +23,7 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int x = 11;
+    int x2 = x * x;
+    cout << x2;
 }

@@ -21,8 +21,14 @@
 
 #include <iostream>
 using namespace std;
+#define PI 3.14
 
 int main()
 {
-    // TODO: Implement the exercise.
+    double radius;
+    cin >> radius;
+    double L = radius * 2 * PI;
+    double A = radius * radius * PI;
+    cout << "L = " << L << endl;
+    cout << "A = " << A << endl;
 }

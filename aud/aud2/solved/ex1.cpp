@@ -26,5 +26,6 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int x = 3 / 2 + (5 - 46 * 5 / 12);
+    cout << x;
 }

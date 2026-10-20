@@ -35,5 +35,13 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    // 345
+    int number;
+    cin >> number;
+    int most;
+    int least;
+    least = number % 10;
+    most = number / 100;
+    cout << "Most = " << most << endl;
+    cout << "Least = " << least << endl;
 }

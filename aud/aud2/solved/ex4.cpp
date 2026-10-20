@@ -22,5 +22,9 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int number1 = 3;
+    int number2 = 5;
+    int number3 = 12;
+    double result = (number1 + number2 + number3) / 3.0;
+    cout << result;
 }

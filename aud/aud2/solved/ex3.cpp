@@ -24,5 +24,12 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    double a = 5;
+    double b = 7.5;
+    double c = 10.2;
+    double L = a + b + c;
+    double S = L / 2;
+    double A2 = S * (S - a) * (S - b) * (S - c);
+    cout << "L = " << L << endl;
+    cout << "A2 = " << A2;
 }

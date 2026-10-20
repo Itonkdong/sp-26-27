@@ -23,5 +23,14 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int starting_number = 19;
+    int num1 = 2;
+    int num2 = 3;
+    int num3 = 5;
+    int num4 = 8;
+
+    cout << starting_number << " divided by " << num1 << " has rem. of " << starting_number % num1 << endl;
+    cout << starting_number << " divided by " << num2 << " has rem. of " << starting_number % num2 << endl;
+    cout << starting_number << " divided by " << num3 << " has rem. of " << starting_number % num3 << endl;
+    cout << starting_number << " divided by " << num4 << " has rem. of " << starting_number % num4 << endl;
 }

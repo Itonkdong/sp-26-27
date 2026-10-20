@@ -23,5 +23,18 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int number1;
+    int number2;
+
+    cin >> number1 >> number2;
+
+    double sum = number1 + number2;
+    double difference = number1 - number2;
+    double product = number1 * number2;
+    int remainder = number1 % number2;
+
+    cout << "Sum of " << number1 << " and " << number2 << " is " << sum << endl;
+    cout << "Difference of " << number1 << " and " << number2 << " is " << difference << endl;
+    cout << "Product of " << number1 << " and " << number2 << " is " << product << endl;
+    cout << "Remainder of " << number1 << " and " << number2 << " is " << remainder << endl;
 }

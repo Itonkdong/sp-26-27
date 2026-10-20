@@ -26,5 +26,20 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    // v - > V
+    // a - > A
+    // ASCII
+    // a - 97
+    // b - 98
+    // c - 99
+
+    // A - 65
+    // B - 66
+    // C - 67
+    char uppercase_letter;
+    cin >> uppercase_letter;
+
+    cout << 'a' - 'A';
+
+    cout << (char) ((int) uppercase_letter + 32);
 }

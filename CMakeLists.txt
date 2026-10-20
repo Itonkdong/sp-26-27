@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.20)
 project(sp_26_27 LANGUAGES CXX)
 
 # Select the session and folder to show in the IDE, then reload CMake.
-set(ACTIVE_AUD "aud2")
-set(ACTIVE_FOLDER "starters") # starters, solved, prep, or your own practice folder
+set(ACTIVE_AUD "aud3")
+set(ACTIVE_FOLDER "solved") # starters, solved, prep, or your own practice folder
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

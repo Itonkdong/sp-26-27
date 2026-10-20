@@ -34,5 +34,43 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int number_of_points;
+    cin >> number_of_points;
+
+    if (number_of_points < 0)
+    {
+        cout << "Invalid number of points " << endl;
+        return 0;
+    }
+
+    if (number_of_points > 100)
+    {
+        cout << "Invalid number of points " << endl;
+        return 0;
+    }
+
+    if (number_of_points <= 50)
+    {
+        cout << " Grade 5" << endl;
+    }
+    else if (number_of_points <= 60)
+    {
+        cout << " Grade 6" << endl;
+    }
+    else if (number_of_points <= 70)
+    {
+        cout << " Grade 7" << endl;
+    }
+    else if (number_of_points >= 71 && number_of_points <= 80)
+    {
+        cout << " Grade 8" << endl;
+    }
+    else if (number_of_points >= 81 && number_of_points <= 90)
+    {
+        cout << " Grade 9" << endl;
+    }
+    else
+    {
+        cout << " Grade 10" << endl;
+    }
 }

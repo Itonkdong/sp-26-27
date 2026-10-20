@@ -28,5 +28,73 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    double x;
+    double y;
+    cin >> x >> y;
+
+    if (x == 0 && y == 0)
+    {
+        cout << "Origin" <<endl;
+        return 0;
+    }
+
+    if (x != 0 && y == 0)
+    {
+        cout << "X axis" <<endl;
+        return 0;
+    }
+
+    if (x == 0 && y != 0)
+    {
+        cout << "Y axis" <<endl;
+        return 0;
+    }
+
+    if (x > 0)
+    {
+        if (y > 0)
+        {
+            cout << "Q1" <<endl;
+        }
+        else
+        {
+            cout << "Q4" << endl;
+        }
+    }
+    else
+    {
+        if (y > 0)
+        {
+            cout << "Q2" <<endl;
+        }
+        else
+        {
+            cout << "Q3" << endl;
+        }
+    }
+
+
+    if (x > 0 && y > 0)
+    {
+        cout << " Q1" << endl;
+    }
+    else if (x < 0 && y > 0)
+    {
+        cout << " Q2" << endl;
+    }
+    else if (x < 0 && y < 0)
+    {
+        cout << " Q3" << endl;
+    }
+    else
+    {
+        if (x > 0 && y < 0)
+        {
+            cout << " Q4" << endl;
+        }
+    }
+
+
+
+    cout << " here "
 }

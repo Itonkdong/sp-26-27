@@ -26,5 +26,32 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    char character;
+    cin >> character;
+
+    // a e [a , z] = [a,b,c,d....z]
+    if (character >= 'a' && character <= 'z')
+    {
+        cout << "lowercase" << endl;
+    }
+    else if (character >= 'A' && character <= 'Z')
+    {
+        cout << " uppercase" << endl;
+    }
+    else
+    {
+        cout << "not a letter"<<endl;
+    }
+    // else
+    // {
+    //     if (character >= 'A' && character <= 'Z')
+    //     {
+    //         cout <<" uppercase"<<endl;
+    //     }
+    //     else
+    //     {
+    //         cout << "not a letter"<<endl;
+    //     }
+    //
+    // }
 }
