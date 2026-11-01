@@ -36,6 +36,7 @@ foreach(SOURCE_FILE IN LISTS EXERCISES)
     string(REPLACE "/" "_" TARGET_NAME "${REL_PATH}")
     string(REPLACE ".cpp" "" TARGET_NAME "${TARGET_NAME}")
 
-    add_executable("${TARGET_NAME}" "${SOURCE_FILE}")
+    add_executable("${TARGET_NAME}" "${SOURCE_FILE}"
+            aud/aud4/prep/labs1.cpp)
 
 endforeach()

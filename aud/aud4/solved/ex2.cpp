@@ -33,5 +33,33 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    double x;
+    int n ;
+    cin >> x >> n;
+    double res = 1;
+
+    // for (int i = 0; i < n; ++i)
+    // {
+    //     res *= x;
+    // }
+
+    int counter  = 0 ;
+
+    // while (counter < n)
+    // {
+    //     res *= x;
+    //     counter ++;
+    // }
+
+    do
+    {
+        res *= x;
+        counter ++;
+    }
+    while (counter < n);
+
+    cout << "X ^ n = " << res;
+
+    return 0;
+
 }

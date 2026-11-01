@@ -51,5 +51,73 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int number_of_points;
+    cin >> number_of_points;
+
+    if (number_of_points < 0)
+    {
+        cout << "Invalid number of points " << endl;
+        return 0;
+    }
+
+    if (number_of_points > 100)
+    {
+        cout << "Invalid number of points " << endl;
+        return 0;
+    }
+
+    int grade = 0;
+
+    if (number_of_points <= 50)
+    {
+        grade = 5;
+    }
+    else if (number_of_points <= 60)
+    {
+        grade = 6;
+    }
+    else if (number_of_points <= 70)
+    {
+        grade = 7;
+    }
+    else if (number_of_points >= 71 && number_of_points <= 80)
+    {
+        grade = 8;
+    }
+    else if (number_of_points >= 81 && number_of_points <= 90)
+    {
+        grade = 9;
+    }
+    else
+    {
+        grade = 10;
+    }
+
+    cout << "Grade " << grade;
+
+    if (grade ==5)
+    {
+        return 0;
+    }
+
+    int last_digit = number_of_points % 10;
+
+    if (last_digit >= 1 && last_digit <= 3)
+    {
+        cout <<"-";
+    }
+    else if (last_digit >= 8 || last_digit == 0)
+    {
+        if (grade != 10)
+        {
+            cout <<"+";
+        }
+    }
+
+
+//     Last digit     Sign
+// *     1-3            -
+// *     4-7            No sign (a blank space)
+// *     8, 9, or 0     +
+
 }

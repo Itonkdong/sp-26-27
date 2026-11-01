@@ -27,5 +27,18 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int sum = 0;
+    for (int i = 11; i < 100; i+=2)
+    {
+        if (i == 99)
+        {
+            cout << i ;
+        }
+        else
+        {
+            cout << i << " + ";
+        }
+        sum = sum + i;
+    }
+    cout << " = " << sum;
 }

@@ -7,7 +7,8 @@
  * Read the lengths of three line segments in any order.
  * Check whether a triangle can be constructed from them.
  * If it can, determine whether it is a right triangle.
- * Calculate and print the area only if the triangle is right-angled.
+
+*
  *
  * Input and Output
  * ----------------
@@ -26,5 +27,32 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    if (((a + b <= c) || (a + c <= b) || (b + c <= a)))
+    {
+        cout << "Not a triangle";
+        return 0;
+    }
+
+    if (a * a + b * b == c * c)
+    {
+        cout << " A right triangle";
+        return 0;
+    }
+
+    if (a * a + c * c == b * b)
+    {
+        cout << " A right triangle";
+        return 0;
+    }
+
+    if (b * b + c * c == a * a)
+    {
+        cout << " A right triangle";
+        return 0;
+    }
+
+    cout << "Not a right triangle" << endl;
 }

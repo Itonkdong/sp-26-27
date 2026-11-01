@@ -21,5 +21,20 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    // [10, 99]
+    //
+    //
+    int sum = 0;
+    for (int i = 10; i < 100; ++i)
+    {
+        if (i % 2 == 0)
+        {
+            sum =  sum + i;
+        }
+
+
+    }
+    cout << "The sum of all the even numbers from 10 till 100 is " << sum;
+
+    return  0;
 }

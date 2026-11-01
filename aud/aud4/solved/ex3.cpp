@@ -29,5 +29,35 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int n;
+    cin >> n;
+    int number ;
+    int rem1, rem2 , rem0;
+    rem0 = 0;
+    rem1 = 0;
+    rem2 = 0;
+
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> number;
+
+        int rem = number % 3;
+
+        if (rem == 1)
+        {
+            rem1 ++;
+        }
+        else if (rem == 2)
+        {
+            rem2 ++;
+        }
+        else
+        {
+            rem0 ++;
+        }
+    }
+
+    cout << " Rem0 = "<<rem0 <<endl;
+    cout << " Rem1 = "<<rem1 <<endl;
+    cout << " Rem2 = "<<rem2 <<endl;
 }
