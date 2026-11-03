@@ -4,7 +4,7 @@
  *
  * Description
  * -----------
- * Recreate the worked switch-case example that asks the following question
+ * This worked switch-case example asks the following question
  * and responds to the entered character.
  *
  * Prompt
@@ -28,5 +28,21 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    char answer;
+    cout << "Is SP easy to learn? (y/n): ";
+    cin >> answer;
+    switch (answer)
+    {
+        case 'Y':
+        case 'y':
+            cout << "I think so too!" << endl;
+            break;
+        case 'N':
+        case 'n':
+            cout << "Really?" << endl;
+            break;
+        default:
+            cout << "Is this a yes or no question?" << endl;
+    }
+    return 0;
 }
