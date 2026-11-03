@@ -26,5 +26,24 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int start;
+    int end;
+    cin >> start >> end;
+    for (int i = start; i <= end; ++i)
+    {
+        int save = i;
+        int revN = 0;
+        while (save > 0)
+        {
+            int last_digit = save % 10;
+            revN = revN * 10 + last_digit;
+            save = save / 10;
+        }
+        if (i == revN)
+        {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
 }

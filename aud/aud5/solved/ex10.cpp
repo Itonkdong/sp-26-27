@@ -25,5 +25,42 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int input;
+    int prev_input;
+
+    if (!(cin >> prev_input >> input))
+    {
+        cout << "Input at least 2 numbers";
+        return 0;
+    }
+
+    if (input < 0 && prev_input < 0)
+    {
+        cout << "Two negativ numbers at the start";
+        return 0;
+    }
+
+    int max_sum = input + prev_input;
+    int position = 2;
+    int counter = 3;
+
+    while (true)
+    {
+        cin >> input;
+        if (input < 0 && prev_input < 0)
+        {
+            break;
+        }
+        if (input + prev_input > max_sum)
+        {
+            max_sum = input + prev_input;
+            position = counter;
+        }
+        prev_input = input;
+        counter++;
+    }
+
+    cout << "Max sum " << max_sum << endl;
+    cout << "Position 1 = " << position << " position 2 = " << position - 1;
+    return 0;
 }

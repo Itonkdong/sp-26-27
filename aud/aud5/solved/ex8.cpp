@@ -30,5 +30,51 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int a;
+    int b;
+
+    int max;
+    int sec_max;
+
+    if (!(cin >> a >> b))
+    {
+        cout << "You must input at least 2 numbers";
+        return 0;
+    }
+
+    if (a > b)
+    {
+        max = a;
+        sec_max = b;
+    }
+    else
+    {
+        max = b;
+        sec_max = a;
+    }
+
+    int input;
+
+    while (true)
+    {
+        if (!(cin >> input))
+        {
+            break;
+        }
+
+        if (input > max)
+        {
+            sec_max = max;
+            max = input;
+        }
+        else if (input > sec_max)
+        {
+            sec_max = input;
+        }
+    }
+
+    cout << "MAX = " << max << endl;
+    cout << "2nd MAX = " << sec_max << endl;
+
+    return 0;
 }

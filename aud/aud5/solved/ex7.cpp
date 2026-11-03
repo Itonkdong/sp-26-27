@@ -24,5 +24,27 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int input;
+    int max = INT32_MIN;
+    while (true)
+    {
+        if (!(cin >> input))
+        {
+            break;
+        }
+
+        if (input > 100)
+        {
+            continue;
+        }
+
+
+        if (input > max)
+        {
+            max = input;
+        }
+    }
+
+    cout << "Maximum = " << max;
+    return 0;
 }

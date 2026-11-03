@@ -32,5 +32,47 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int N;
+    cin >> N;
+    int input;
+    int sum_odd = 0;
+    int sum_even = 0;
+    for (int i = 1; i <= N; ++i)
+    {
+        int position = i;
+        cin >> input;
+
+        if (position % 2 == 0)
+        {
+            sum_even += input;
+        }
+        else
+        {
+            sum_odd += input;
+        }
+    }
+    int difference = sum_even - sum_odd;
+    int abs_difference;
+
+
+    if (difference < 0)
+    {
+        abs_difference = (-1) * difference;
+    }
+    else
+    {
+        abs_difference = difference;
+    }
+
+
+    if (abs_difference > 10)
+    {
+        cout << "The two sums differ greatly";
+    }
+    else
+    {
+        cout << "The two sums are similar";
+    }
+
+    return 0;
 }
