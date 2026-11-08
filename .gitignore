@@ -1,6 +1,7 @@
 # Private classroom materials
 /aud/**/old/
 /aud/**/prep/
+/questions/
 
 # CMake and local build output
 /cmake-build-*/
