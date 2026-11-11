@@ -26,7 +26,47 @@
 #include <iostream>
 using namespace std;
 
+bool is_prime(int number)
+{
+    int counter = 0;
+    for (int i = 1; i <= number; ++i)
+    {
+        if (number % i == 0)
+        {
+            counter++;
+        }
+    }
+
+    return counter == 2;
+}
+
+int sum_digits(int number)
+{
+    int sum = 0;
+    while (number != 0)
+    {
+        sum += number % 10;
+        number = number / 10;
+    }
+
+    return sum;
+}
+
+
 int main()
 {
-    // TODO: Implement the exercise.
+    int counter = 0;
+    for (int i = 2; i < 10000; ++i)
+    {
+        int sum_digits_1 = sum_digits(i);
+
+        if (is_prime(i) && is_prime(sum_digits_1))
+        {
+            cout << i << " ";
+            counter++;
+        }
+    }
+
+    cout << endl;
+    cout << "Counter = " << counter;
 }

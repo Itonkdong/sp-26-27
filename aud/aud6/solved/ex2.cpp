@@ -33,7 +33,25 @@
 #include <iostream>
 using namespace std;
 
+int sum(int number)
+{
+    int first_two = number / 100;
+    int second_two = number % 100;
+
+    return first_two + second_two;
+}
+
 int main()
 {
-    // TODO: Implement the exercise.
+    int counter = 0;
+    for (int i = 1000; i <= 9999; ++i)
+    {
+        if (i % sum(i) == 0)
+        {
+            cout << i << " ";
+            counter++;
+        }
+    }
+
+    cout << "C = " << counter;
 }

@@ -25,7 +25,39 @@
 #include <iostream>
 using namespace std;
 
+bool is_prime(int number)
+{
+    int counter = 0;
+    for (int i = 1; i <= number; ++i)
+    {
+        if (number % i == 0)
+        {
+            counter++;
+        }
+    }
+
+    return counter == 2;
+}
+
+
 int main()
 {
-    // TODO: Implement the exercise.
+    int counter = 0;
+    for (int i = 2; i < 1000; ++i)
+    {
+        int first_number = i;
+        int second_number = i + 2;
+        if (second_number >= 1000)
+        {
+            break;;
+        }
+
+        if (is_prime(first_number) && is_prime(second_number))
+        {
+            cout << first_number << " " << second_number << endl;
+            counter++;
+        }
+    }
+
+    cout << "Counter = " << counter;
 }

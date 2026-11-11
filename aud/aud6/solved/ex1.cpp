@@ -25,9 +25,36 @@
  */
 
 #include <iostream>
+#define PI 3.14
+
 using namespace std;
+
+double diameter(double radius)
+{
+    return 2 * radius;
+}
+
+double perimeter(double radius)
+{
+    return 2 * radius * PI;
+}
+
+double area(double r)
+{
+    return r * r * PI;
+}
+
 
 int main()
 {
-    // TODO: Implement the exercise.
+    double radius;
+    cin >> radius;
+
+    double L = perimeter(radius);
+    double A = area(radius);
+    double D = diameter(radius);
+
+    cout << "L = " << L << endl;
+    cout << "A = " << A << endl;
+    cout << "D = " << D << endl;
 }

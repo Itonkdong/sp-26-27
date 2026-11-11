@@ -30,7 +30,41 @@
 #include <iostream>
 using namespace std;
 
+bool is_prime(int number)
+{
+    int counter = 0;
+    for (int i = 1; i <= number; ++i)
+    {
+        if (number % i == 0)
+        {
+            counter++;
+        }
+    }
+
+    return counter == 2;
+}
+
+int closest_prime(int number)
+{
+    int start = number + 1;
+    while (true)
+    {
+        if (is_prime(start))
+        {
+            break;
+        }
+        start++;
+    }
+
+
+    return start;
+}
+
 int main()
 {
-    // TODO: Implement the exercise.
+    int n;
+    cin >> n;
+
+    int closest_prime_1 = closest_prime(n);
+    cout << "Closest prime of " << n << " is " << closest_prime_1;
 }

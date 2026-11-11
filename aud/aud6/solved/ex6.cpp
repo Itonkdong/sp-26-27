@@ -27,7 +27,38 @@
 #include <iostream>
 using namespace std;
 
+int sum_first_k(int k)
+{
+    int sum = 0;
+    for (int i = 1; i <= k; ++i)
+    {
+        sum = sum + i;
+    }
+    return sum;
+}
+
+int factorial(int k)
+{
+    int product = 1;
+    for (int i = 1; i <= k; ++i)
+    {
+        product = product * i;
+    }
+    return product;
+}
+
+
 int main()
 {
-    // TODO: Implement the exercise.
+    int n;
+    cin >> n;
+    int result = 0;
+    for (int i = 1; i <= n; ++i)
+    {
+        int sum_first_k_1 = sum_first_k(i);
+        int partial_result = factorial(sum_first_k_1);
+        result += partial_result;
+    }
+
+    cout << "Result = " << result;
 }
