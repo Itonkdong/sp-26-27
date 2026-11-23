@@ -4,7 +4,7 @@ project(sp_26_27 LANGUAGES CXX)
 
 # Select the session and folder to show in the IDE, then reload CMake.
 set(ACTIVE_AUD "aud6")
-set(ACTIVE_FOLDER "solved") # starters, solved, prep, or your own practice folder
+set(ACTIVE_FOLDER "prep") # starters, solved, prep, or your own practice folder
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -36,7 +36,6 @@ foreach(SOURCE_FILE IN LISTS EXERCISES)
     string(REPLACE "/" "_" TARGET_NAME "${REL_PATH}")
     string(REPLACE ".cpp" "" TARGET_NAME "${TARGET_NAME}")
 
-    add_executable("${TARGET_NAME}" "${SOURCE_FILE}"
-            aud/aud4/prep/labs1.cpp)
+    add_executable("${TARGET_NAME}" "${SOURCE_FILE}")
 
 endforeach()

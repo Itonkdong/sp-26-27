@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://finki-mk.github.io/SP_2023/mk/12.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>12</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="./12_files/style.css">
+</head>
+<body>
+<p><img src="12_files/logo_mk.png"></p>
+<h1 id="структурно-програмирање">Структурно програмирање</h1>
+<h2 id="аудиториска-вежба-12---текстуални-низи-стрингови">Аудиториска
+вежба 12 - Текстуални низи (стрингови)</h2>
+<hr>
+<h3 id="потсетување-од-предавања">1. Потсетување од предавања</h3>
+<h4 id="функции-за-работа-со-текстуални-низи-од-библиотеката-cstring">1.1.
+Функции за работа со текстуални низи од библиотеката
+<code>&lt;cstring&gt;</code></h4>
+<p>Функции за менување на текстуални низи:</p>
+<ul>
+<li><code>strcpy()</code> - копирање на една текстуална низа во
+друга</li>
+<li><code>strncpy()</code> - копирање на n бајти од една текстуална низа
+во друга</li>
+<li><code>strcat()</code> - надоврзува една текстуална низа на крајот на
+друга</li>
+<li><code>strncat()</code> - надоврзува n бајти од една текстуална низа
+на крајот на друга</li>
+</ul>
+<p>Функции за менување на меморијата:</p>
+<ul>
+<li><code>memset()</code> - пополнува низа со одреден бајт</li>
+</ul>
+<p>Функции за претворање на текстуални низи во броеви:</p>
+<ul>
+<li><code>atof()</code> - претвора текстуална низа во децимален
+број</li>
+<li><code>atoi()</code> - претвора текстуална низа во цел број</li>
+</ul>
+<p>Функции за испитување на текстуални низи:</p>
+<ul>
+<li><code>strlen()</code> - ја враќа должината на дадена текстуална
+низа</li>
+<li><code>strcmp()</code> - споредува две текстуални низи</li>
+<li><code>strncmp()</code> - споредува n бајти од две текстуални
+низи</li>
+<li><code>strchr()</code> - го наоѓа првото појавување на даден знак во
+текстуална низа</li>
+<li><code>strrchr()</code> - го наоѓа последното појавување на даден
+знак во текстуална низа</li>
+<li><code>strspn()</code> - во текстуална низа го наоѓа првото
+појавување на знак кој не припаѓа на специфицирано множество од
+знаци</li>
+<li><code>strcspn()</code> - во текстуална низа го наоѓа последното
+појавување на знак кој не припаѓа на специфицирано множество од
+знаци</li>
+<li><code>strpbrk()</code> - во текстуална низа го наоѓа првото
+појавување на знак кој припаѓа на специфицирано множество од знаци</li>
+<li><code>strstr()</code> - во текстуална низа го наоѓа првото
+појавување на дадена подниза</li>
+</ul>
+<h4 id="функции-за-работа-со-знаци-од-библиотеката-cctype">1.2. Функции
+за работа со знаци од библиотеката <code>&lt;cctype&gt;</code></h4>
+<p>Функции за работа со единечен знак:</p>
+<ul>
+<li><code>isalnum()</code> - проверува дали даден знак е алфанумерички
+(буква или цифра)</li>
+<li><code>isalpha()</code> - проверува дали даден знак е буква</li>
+<li><code>iscntrl()</code> - проверува дали даден знак е контролен
+знак</li>
+<li><code>isdigit()</code> - проверува дали даден знак е декадна
+цифра</li>
+<li><code>isxdigit()</code> - проверува дали даден знак е хексадекадна
+цифра</li>
+<li><code>isprint()</code> - проверува дали даден знак може да се
+печати</li>
+<li><code>ispunct()</code> - проверува дали даден знак е интерпункциски
+знак</li>
+<li><code>isspace()</code> - проверува дали даден знак е празно
+место</li>
+<li><code>islower()</code> - проверува дали даден знак е мала буква</li>
+<li><code>isupper()</code> - проверува дали даден знак е голема
+буква</li>
+<li><code>tolower()</code> - претвора дадена голема буква во соодветната
+мала буква</li>
+<li><code>toupper()</code> - претвора дадена мала буква во соодветната
+голема буква</li>
+<li><code>isgraph()</code> - проверува дали даден знак има локална
+графичка репрезентација</li>
+</ul>
+<h3 id="задачи">2. Задачи</h3>
+<h4 id="задача-1">2.1. Задача 1</h4>
+<p>Да се напише функција што ќе одредува колку пати даден знак се наоѓа
+во даден стринг. Знакот за споредување и стрингот се внесуваат од
+тастатура.</p>
+<p>Пример</p>
+<p>За стрингот</p>
+<p><code>HELLO FINKI</code></p>
+<p>знакот <code>L</code> се појавува 2 пати.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb1-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb1-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> count_char<span class="op">(</span><span class="dt">char</span> str<span class="op">[],</span> <span class="dt">char</span> c<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> vkupno <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> str<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>str<span class="op">[</span>i<span class="op">]</span> <span class="op">==</span> c<span class="op">)</span> vkupno<span class="op">++;</span></span>
+<span id="cb1-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> vkupno<span class="op">;</span></span>
+<span id="cb1-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">],</span> c<span class="op">;</span></span>
+<span id="cb1-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-15" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb1-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    cin <span class="op">&gt;&gt;</span> c<span class="op">;</span></span>
+<span id="cb1-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> count_char<span class="op">(</span>s<span class="op">,</span> c<span class="op">);</span></span>
+<span id="cb1-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-2">2.2. Задача 2</h4>
+<p>Да се напише функција што ќе ја одредува должината на една текстуална
+низа.</p>
+<p>Да се даде итеративно и <strong>рекурзивно</strong> решение.</p>
+<p>Пример</p>
+<p>Ако на функцијата како аргумент и се предаде стрингот</p>
+<p><code>zdravo!</code></p>
+<p>тогаш таа треба да врати: <code>7</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb2-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb2-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> length<span class="op">(</span><span class="dt">char</span> s<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> len <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> s<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb2-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-7" aria-hidden="true" tabindex="-1"></a>        len<span class="op">++;</span></span>
+<span id="cb2-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> len<span class="op">;</span></span>
+<span id="cb2-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> length_r<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>s<span class="op">)</span> <span class="op">{</span> <span class="co">// same as char s[]</span></span>
+<span id="cb2-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(*</span>s <span class="op">==</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span> <span class="co">// same as if (s[0] == '\0')</span></span>
+<span id="cb2-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> length_r<span class="op">(</span>s <span class="op">+</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb2-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb2-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb2-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-20" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb2-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-21" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Dolzhina: "</span> <span class="op">&lt;&lt;</span> length<span class="op">(</span>s<span class="op">)</span> <span class="op">&lt;&lt;</span> <span class="st">" i "</span> <span class="op">&lt;&lt;</span> length_r<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb2-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-3">2.3. Задача 3</h4>
+<p>Да се напише програма која ќе ја отпечати поднизата на дадена
+текстуална низа (што се внесува од тастатура) определена со позицијата и
+должината, што како параметри се внесуваат од тастатура. Поднизата
+започнува од знакот што се наоѓа на соодветната позиција во текстуалната
+низа, броејќи од лево.</p>
+<p>Пример</p>
+<p>Ако од тастатура се внесе:</p>
+<p><code>banana</code></p>
+<p>позиција: <code>2</code></p>
+<p>должина: <code>4</code></p>
+<p>тогаш програмата треба да отпечати: <code>nana</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb3-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cstring&gt;</span></span>
+<span id="cb3-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb3-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">],</span> dest<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb3-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> pozicija<span class="op">,</span> dolzhina<span class="op">;</span></span>
+<span id="cb3-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-12" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb3-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-13" aria-hidden="true" tabindex="-1"></a>    cin <span class="op">&gt;&gt;</span> pozicija <span class="op">&gt;&gt;</span> dolzhina<span class="op">;</span></span>
+<span id="cb3-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>pozicija <span class="op">&lt;=</span> strlen<span class="op">(</span>s<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb3-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-16" aria-hidden="true" tabindex="-1"></a>        strncpy<span class="op">(</span>dest<span class="op">,</span> s <span class="op">+</span> pozicija <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> dolzhina<span class="op">);</span></span>
+<span id="cb3-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-17" aria-hidden="true" tabindex="-1"></a>        dest<span class="op">[</span>dolzhina<span class="op">]</span> <span class="op">=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-18" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> <span class="st">"Rezultat: "</span> <span class="op">&lt;&lt;</span> dest <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb3-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span></span>
+<span id="cb3-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-20" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> <span class="st">"Nevaliden vnes, prochitaniot string ima samo </span><span class="sc">%d</span><span class="st"> znaci.</span><span class="sc">\n</span><span class="st">"</span> <span class="op">&lt;&lt;</span> strlen<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb3-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-4">2.4. Задача 4</h4>
+<p>Да се напише функција која ќе одредува дали една текстуална низа е
+подниза на друга текстуална низа.</p>
+<p>Пример</p>
+<p><code>face</code> е подниза на <code>Please faceAbook</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb4-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cstring&gt;</span></span>
+<span id="cb4-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb4-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> podstring<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>s1<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>s2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> d1 <span class="op">=</span> strlen<span class="op">(</span>s1<span class="op">);</span></span>
+<span id="cb4-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> d2 <span class="op">=</span> strlen<span class="op">(</span>s2<span class="op">);</span></span>
+<span id="cb4-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>d1 <span class="op">&gt;</span> d2<span class="op">)</span></span>
+<span id="cb4-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;=</span> d2 <span class="op">-</span> d1<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb4-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>strncmp<span class="op">(</span>s1<span class="op">,</span> s2 <span class="op">+</span> i<span class="op">,</span> d1<span class="op">)</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb4-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb4-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s1<span class="op">[</span>MAX<span class="op">],</span> s2<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb4-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-21" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s1<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb4-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-22" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s2<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb4-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>podstring<span class="op">(</span>s1<span class="op">,</span> s2<span class="op">))</span></span>
+<span id="cb4-24"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-24" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> s1 <span class="op">&lt;&lt;</span> <span class="st">" e podstring na "</span> <span class="op">&lt;&lt;</span> s2 <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb4-25"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb4-26"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-26" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> s1 <span class="op">&lt;&lt;</span> <span class="st">" NE e podstring na "</span> <span class="op">&lt;&lt;</span> s2 <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb4-27"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-28"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-5">2.5. Задача 5</h4>
+<p>Да се напише функција која ќе проверува дали дадена текстуална низа е
+палиндром.</p>
+<p>Една текстуална низа е <strong>палиндром</strong> ако таа се чита
+исто од лево на десно и од десно на лево.</p>
+<p>Примери за палиндроми</p>
+<pre><code>dovod
+ana
+kalabalak</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb6-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cstring&gt;</span></span>
+<span id="cb6-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb6-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> e_palindrom<span class="op">(</span><span class="dt">char</span> str<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb6-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> strlen<span class="op">(</span>str<span class="op">);</span></span>
+<span id="cb6-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n <span class="op">/</span> <span class="dv">2</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb6-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>str<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> str<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span> <span class="op">-</span> i<span class="op">])</span></span>
+<span id="cb6-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="dv">0</span><span class="op">;;</span></span>
+<span id="cb6-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">// REKURZIVNO</span></span>
+<span id="cb6-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> e_pal<span class="op">(</span><span class="dt">char</span> str<span class="op">[],</span> <span class="dt">int</span> start<span class="op">,</span> <span class="dt">int</span> end<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>start <span class="op">&gt;=</span> end<span class="op">)</span> <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>str<span class="op">[</span>start<span class="op">]</span> <span class="op">==</span> str<span class="op">[</span>end<span class="op">])</span></span>
+<span id="cb6-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> e_pal<span class="op">(</span>str<span class="op">,</span> start <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> end <span class="op">-</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb6-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-24"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb6-25"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb6-26"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-26" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb6-27"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-27" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb6-28"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>e_pal<span class="op">(</span>s<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> strlen<span class="op">(</span>s<span class="op">)</span> <span class="op">-</span> <span class="dv">1</span><span class="op">))</span></span>
+<span id="cb6-29"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-29" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"e palindrom."</span><span class="op">);</span></span>
+<span id="cb6-30"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb6-31"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-31" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"NE e palindrom."</span><span class="op">);</span></span>
+<span id="cb6-32"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-33"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-5-a-за-дома">2.6. Задача 5-a (За Дома)</h4>
+<p>Да се напише функција која ќе проверува дали дадена реченица е
+палиндром. При проверката да се игнорираат празните места,
+интерпункциските знаци, а соодветните мали и големи букви да се сметаат
+за еднакви (<code>A == a</code>, <code>B == b</code>, итн.).</p>
+<p>Примери за реченици - палиндроми</p>
+<pre><code>Jadejne i pienje daj!
+A man, a plan, a canal, Panama.
+Never odd or even.
+Rise to vote sir!</code></pre>
+<h4 id="задача-6">2.7. Задача 6</h4>
+<p>Да се напише функција која за дадена текстуална низа ќе одредува дали
+таа е доволно сложена за да биде лозинка.</p>
+<p>Секоја лозинка мора да содржи барем една буква, барем една цифра и
+барем еден специјален знак.</p>
+<p>Пример</p>
+<p><code>zdr@v0!</code> е валидна лозинка.</p>
+<p><code>zdravo</code> не е валидна лозинка.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb8-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cctype&gt;</span></span>
+<span id="cb8-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb8-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> e_validna_lozinka<span class="op">(</span><span class="dt">char</span> str<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb8-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> bukvi <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> cifri <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> spec <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb8-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> str<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb8-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>isalpha<span class="op">(</span>str<span class="op">[</span>i<span class="op">]))</span></span>
+<span id="cb8-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-10" aria-hidden="true" tabindex="-1"></a>            bukvi<span class="op">++;</span></span>
+<span id="cb8-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>isdigit<span class="op">(</span>str<span class="op">[</span>i<span class="op">]))</span></span>
+<span id="cb8-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-12" aria-hidden="true" tabindex="-1"></a>            cifri<span class="op">++;</span></span>
+<span id="cb8-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
+<span id="cb8-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-14" aria-hidden="true" tabindex="-1"></a>            spec<span class="op">++;</span></span>
+<span id="cb8-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span>bukvi <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> cifri <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> spec <span class="op">&gt;</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb8-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb8-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb8-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb8-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb8-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-23" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb8-24"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-25" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb8-26"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>e_validna_lozinka<span class="op">(</span>s<span class="op">))</span></span>
+<span id="cb8-27"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-27" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> <span class="st">"e validna lozinka."</span><span class="op">;</span></span>
+<span id="cb8-28"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb8-29"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-29" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> <span class="st">"NE e validna lozinka."</span><span class="op">;</span></span>
+<span id="cb8-30"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb8-31"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-7">2.8. Задача 7</h4>
+<p>Да се напише функција која во стринг што и се предава како влезен
+параметар ќе ги промени малите букви во големи и обратно, и ќе ги
+отстрани сите цифри и специјални знаци.</p>
+<p>Пример</p>
+<p>За низата:</p>
+<p><code>0v@ePr1m3R</code></p>
+<p>треба да се добие:</p>
+<p><code>VEpRMr</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb9-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cctype&gt;</span></span>
+<span id="cb9-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb9-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> filter<span class="op">(</span><span class="dt">char</span> str<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb9-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>str<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>isalpha<span class="op">(</span>str<span class="op">[</span>i<span class="op">]))</span> <span class="op">{</span></span>
+<span id="cb9-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>islower<span class="op">(</span>str<span class="op">[</span>i<span class="op">]))</span></span>
+<span id="cb9-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-11" aria-hidden="true" tabindex="-1"></a>                str<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> toupper<span class="op">(</span>str<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb9-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>isupper<span class="op">(</span>str<span class="op">[</span>i<span class="op">]))</span></span>
+<span id="cb9-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-13" aria-hidden="true" tabindex="-1"></a>                str<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> tolower<span class="op">(</span>str<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb9-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-14" aria-hidden="true" tabindex="-1"></a>            j<span class="op">++;</span></span>
+<span id="cb9-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb9-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-16" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb9-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-18" aria-hidden="true" tabindex="-1"></a>    str<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span></span>
+<span id="cb9-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb9-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb9-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb9-24"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-24" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb9-25"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-26" aria-hidden="true" tabindex="-1"></a>    filter<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb9-27"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-27" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb9-28"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-29"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-8">2.9. Задача 8</h4>
+<p>Да се напише функција која во дадена текстуална низа ќе ги отстранува
+празните места на почетокот и крајот од низата.</p>
+<p>Пример</p>
+<p>За низата:</p>
+<pre>"   make trim   "</pre>
+<p>треба да се добие:</p>
+<pre>"make trim"</pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb10-2"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cctype&gt;</span></span>
+<span id="cb10-3"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb10-5"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> trim<span class="op">(</span><span class="dt">char</span> s<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb10-7"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> spaces <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>isspace<span class="op">(</span>s<span class="op">[</span>spaces<span class="op">]))</span> <span class="op">{</span></span>
+<span id="cb10-9"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-9" aria-hidden="true" tabindex="-1"></a>        spaces<span class="op">++;</span></span>
+<span id="cb10-10"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-11"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb10-12"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> s<span class="op">[</span>i <span class="op">+</span> spaces<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb10-13"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-13" aria-hidden="true" tabindex="-1"></a>        s<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> s<span class="op">[</span>i <span class="op">+</span> spaces<span class="op">];</span></span>
+<span id="cb10-14"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-15"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-15" aria-hidden="true" tabindex="-1"></a>    s<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span></span>
+<span id="cb10-16"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> isspace<span class="op">(</span>s<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">]))</span> <span class="op">{</span></span>
+<span id="cb10-17"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-17" aria-hidden="true" tabindex="-1"></a>        i<span class="op">--;</span></span>
+<span id="cb10-18"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-18" aria-hidden="true" tabindex="-1"></a>        s<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">;</span></span>
+<span id="cb10-19"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-20"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb10-21"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb10-23"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb10-24"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> s<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb10-25"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-25" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">.</span>getline<span class="op">(</span>s<span class="op">,</span> MAX<span class="op">);</span></span>
+<span id="cb10-26"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-26" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"["</span> <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> <span class="st">"] -&gt; "</span><span class="op">;</span></span>
+<span id="cb10-27"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-27" aria-hidden="true" tabindex="-1"></a>    trim<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb10-28"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-28" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"["</span> <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> <span class="st">"]"</span><span class="op">;</span></span>
+<span id="cb10-29"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-30"><a href="https://finki-mk.github.io/SP_2023/mk/12.html#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+
+
+</body></html>

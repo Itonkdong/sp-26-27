@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://finki-mk.github.io/SP_2023/mk/11.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>11</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="./11_files/style.css">
+</head>
+<body>
+<p><img src="11_files/logo_mk.png"></p>
+<h1 id="структурно-програмирање">Структурно програмирање</h1>
+<h2 id="аудиториска-вежба-11---едноставни-алгоритми-за-работа-со-низи">Аудиториска
+вежба 11 - Едноставни алгоритми за работа со низи</h2>
+<hr>
+<h3 id="задачи">Задачи</h3>
+<h3 id="замена-со-покажувачи-swap-with-pointers">1.1 Замена со
+покажувачи (Swap with pointers)</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> swap <span class="op">(</span><span class="dt">int</span> <span class="op">*</span>a<span class="op">,</span> <span class="dt">int</span> <span class="op">*</span>b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> tmp <span class="op">=</span> <span class="op">*</span>a<span class="op">;</span></span>
+<span id="cb1-3"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">*</span>a <span class="op">=</span> <span class="op">*</span>b<span class="op">;</span></span>
+<span id="cb1-4"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">*</span>b <span class="op">=</span> tmp<span class="op">;</span></span>
+<span id="cb1-5"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="пронаоѓање-на-минимална-и-максимална-вредност-во-низа-со-покажувачи">1.2
+Пронаоѓање на минимална и максимална вредност во низа со покажувачи</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> findMinAndMax<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> size<span class="op">,</span> <span class="dt">int</span> <span class="op">*</span>min<span class="op">,</span> <span class="dt">int</span> <span class="op">*</span>max<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>min <span class="op">=</span> arr<span class="op">[</span><span class="dv">0</span><span class="op">];</span></span>
+<span id="cb2-3"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>max <span class="op">=</span> arr<span class="op">[</span><span class="dv">0</span><span class="op">];</span></span>
+<span id="cb2-4"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-5"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> size<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">&lt;</span> <span class="op">*</span>min<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-7" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span>min <span class="op">=</span> arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb2-8"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-9"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">&gt;</span> <span class="op">*</span>max<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-10"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span>max <span class="op">=</span> arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb2-11"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-12"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-13"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-14"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-16"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> array<span class="op">[</span><span class="dv">100</span><span class="op">];</span></span>
+<span id="cb2-17"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">,</span>n<span class="op">;</span></span>
+<span id="cb2-18"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-18" aria-hidden="true" tabindex="-1"></a>    cin<span class="op">&gt;&gt;</span>n<span class="op">;</span></span>
+<span id="cb2-19"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> min <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> max <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-20"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span>n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-21"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-21" aria-hidden="true" tabindex="-1"></a>        cin <span class="op">&gt;&gt;</span> array<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb2-22"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-23"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-24"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-24" aria-hidden="true" tabindex="-1"></a>    findMinAndMax<span class="op">(</span>array<span class="op">,</span> n<span class="op">,</span> <span class="op">&amp;</span>min<span class="op">,</span> <span class="op">&amp;</span>max<span class="op">);</span></span>
+<span id="cb2-25"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-26"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-26" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Minimum value: "</span> <span class="op">&lt;&lt;</span> min <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb2-27"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-27" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Maximum value: "</span> <span class="op">&lt;&lt;</span> max <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb2-28"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-29"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="задача-1">2. Задача 1</h3>
+<p>Да се напишат фунција за сортирање на низа со помош на методот за
+сортирање - Метод на меурче (Bubble sort) Да се напишат функции за
+внесување и печатење на елементите на една низа и да се напише главна
+програма во која се тестира методот</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb3-2"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb3-4"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">//Reference vs. without reference</span></span>
+<span id="cb3-7"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> swap<span class="op">(</span><span class="dt">int</span><span class="op">&amp;</span> a<span class="op">,</span> <span class="dt">int</span><span class="op">&amp;</span> b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> temp <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb3-9"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-9" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> b<span class="op">;</span></span>
+<span id="cb3-10"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-10" aria-hidden="true" tabindex="-1"></a>  b <span class="op">=</span> temp<span class="op">;</span></span>
+<span id="cb3-11"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-12"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> inputArray<span class="op">(</span><span class="dt">int</span> array<span class="op">[],</span> <span class="dt">int</span> size<span class="op">)</span></span>
+<span id="cb3-14"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-15"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> size<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-16"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-16" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> <span class="st">"Enter element "</span> <span class="op">&lt;&lt;</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;&lt;</span> <span class="st">": "</span><span class="op">;</span></span>
+<span id="cb3-17"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-17" aria-hidden="true" tabindex="-1"></a>        cin <span class="op">&gt;&gt;</span> array<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-18"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-19"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-20"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> printArray<span class="op">(</span><span class="dt">int</span> array<span class="op">[],</span> <span class="dt">int</span> size<span class="op">)</span></span>
+<span id="cb3-22"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-23"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> size<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-24"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-24" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> array<span class="op">[</span>i<span class="op">]</span> <span class="op">&lt;&lt;</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb3-25"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-26"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-26" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb3-27"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-28"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> bubbleSort<span class="op">(</span><span class="dt">int</span> array<span class="op">[],</span> <span class="dt">int</span> size<span class="op">)</span></span>
+<span id="cb3-30"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-30" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-31"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-32"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> swapped <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-33"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>swapped<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-34"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-34" aria-hidden="true" tabindex="-1"></a>        swapped <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb3-35"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> size <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-36"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>array<span class="op">[</span>i<span class="op">]</span> <span class="op">&gt;</span> array<span class="op">[</span>i <span class="op">+</span> <span class="dv">1</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb3-37"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-37" aria-hidden="true" tabindex="-1"></a>                swap<span class="op">(</span>array<span class="op">[</span>i<span class="op">],</span> array<span class="op">[</span>i <span class="op">+</span> <span class="dv">1</span><span class="op">]);</span></span>
+<span id="cb3-38"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-38" aria-hidden="true" tabindex="-1"></a>                swapped <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-39"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-39" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb3-40"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-40" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-41"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-42"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-43"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb3-45"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-45" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-46"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-47"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> size<span class="op">;</span></span>
+<span id="cb3-48"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-48" aria-hidden="true" tabindex="-1"></a>    cin <span class="op">&gt;&gt;</span> size<span class="op">;</span></span>
+<span id="cb3-49"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> array<span class="op">[</span>size<span class="op">];</span></span>
+<span id="cb3-51"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-51" aria-hidden="true" tabindex="-1"></a>    inputArray<span class="op">(</span>array<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-52"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-52" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Original array</span></span>
+<span id="cb3-53"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-53" aria-hidden="true" tabindex="-1"></a>    printArray<span class="op">(</span>array<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-54"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-55" aria-hidden="true" tabindex="-1"></a>    bubbleSort<span class="op">(</span>array<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-56"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-56" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Bubble sort</span></span>
+<span id="cb3-57"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-57" aria-hidden="true" tabindex="-1"></a>    printArray<span class="op">(</span>array<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-58"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-60"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-2">3. Задача 2</h4>
+<p>Да се напишат следните функции за пребарување во низа: • Линеарно
+пребарување • Бинарно пребарување Потоа да се напише главна програма во
+која ќе се пополнува низа со броевите од 1 до 1 000 000, а потоа се
+генерира случаен број во овој опсег чија што позиција треба да се
+пронајде со повикување на двете функции за пребарување.</p>
+<h4 id="за-дома">3.1. За дома:</h4>
+<p>За двете функции избројте го и споредете го бројот на потребни
+итерации за пронаоѓање на бројот.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb4-2"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cstdlib&gt;</span><span class="pp"> </span><span class="co">// For rand()</span></span>
+<span id="cb4-3"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;ctime&gt;</span><span class="pp"> </span><span class="co">// For time()</span></span>
+<span id="cb4-4"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb4-6"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> linearSearch<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> n<span class="op">,</span> <span class="dt">int</span> key<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-9"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">==</span> key<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-10"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> i<span class="op">;</span></span>
+<span id="cb4-11"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-12"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-13"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-14"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-15"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> binarySearchIterative<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> l<span class="op">,</span> <span class="dt">int</span> r<span class="op">,</span> <span class="dt">int</span> x<span class="op">)</span></span>
+<span id="cb4-17"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb4-18"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>l <span class="op">&lt;=</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-19"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> m <span class="op">=</span> l <span class="op">+</span> <span class="op">(</span>r <span class="op">-</span> l<span class="op">)</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb4-20"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-20" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-21"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Check if x is present at mid</span></span>
+<span id="cb4-22"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>m<span class="op">]</span> <span class="op">==</span> x<span class="op">)</span></span>
+<span id="cb4-23"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> m<span class="op">;</span></span>
+<span id="cb4-24"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-24" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-25"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="co">// If x greater, ignore left half</span></span>
+<span id="cb4-26"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>m<span class="op">]</span> <span class="op">&lt;</span> x<span class="op">)</span></span>
+<span id="cb4-27"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-27" aria-hidden="true" tabindex="-1"></a>            l <span class="op">=</span> m <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-28"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-28" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-29"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-29" aria-hidden="true" tabindex="-1"></a>        <span class="co">// If x is smaller, ignore right half</span></span>
+<span id="cb4-30"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
+<span id="cb4-31"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-31" aria-hidden="true" tabindex="-1"></a>            r <span class="op">=</span> m <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-32"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-33"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-33" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-34"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">// If we reach here, then element was not present</span></span>
+<span id="cb4-35"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-36"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-37"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-37" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-38"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> binarySearch<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> l<span class="op">,</span> <span class="dt">int</span> r<span class="op">,</span> <span class="dt">int</span> key<span class="op">)</span></span>
+<span id="cb4-40"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-40" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-41"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb4-42"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>l <span class="op">&lt;=</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-43"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-43" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> mid <span class="op">=</span> l <span class="op">+</span> <span class="op">(</span>r <span class="op">-</span> l<span class="op">)</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb4-44"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>mid<span class="op">]</span> <span class="op">==</span> key<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-46"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> mid<span class="op">;</span></span>
+<span id="cb4-47"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-47" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span></span>
+<span id="cb4-48"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-48" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-49"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>arr<span class="op">[</span>mid<span class="op">]</span> <span class="op">&lt;</span> key<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-50"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> binarySearch<span class="op">(</span>arr<span class="op">,</span> mid <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> r<span class="op">,</span> key<span class="op">);</span></span>
+<span id="cb4-51"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-51" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-52"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> binarySearch<span class="op">(</span>arr<span class="op">,</span> l<span class="op">,</span> mid <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> key<span class="op">);</span></span>
+<span id="cb4-53"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-53" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-54"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-54" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-55"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-56"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-57"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb4-59"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-59" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-60"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb4-61"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-61" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Initialize the array with numbers from 1 to 1,000,000</span></span>
+<span id="cb4-62"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> arr<span class="op">[</span><span class="dv">1000001</span><span class="op">];</span></span>
+<span id="cb4-63"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">1000001</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-64"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-64" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-65"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-66"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-67"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-67" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Generate a random number within the range</span></span>
+<span id="cb4-68"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-68" aria-hidden="true" tabindex="-1"></a>    srand<span class="op">(</span>time<span class="op">(</span>NULL<span class="op">));</span> <span class="co">// Seed the random number generator</span></span>
+<span id="cb4-69"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> randomNum <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> rand<span class="op">()</span> <span class="op">%</span> <span class="dv">1000000</span><span class="op">;</span> <span class="co">// Generate a random number between 1 and 1,000,000</span></span>
+<span id="cb4-70"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-71" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Perform linear search</span></span>
+<span id="cb4-72"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> linearSearchIndex <span class="op">=</span> linearSearch<span class="op">(</span>arr<span class="op">,</span> <span class="dv">1000001</span><span class="op">,</span> randomNum<span class="op">);</span></span>
+<span id="cb4-73"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-73" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Linear search: "</span> <span class="op">&lt;&lt;</span> linearSearchIndex <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb4-74"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-75" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Perform binary search</span></span>
+<span id="cb4-76"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-76" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> binarySearchIndex <span class="op">=</span> binarySearch<span class="op">(</span>arr<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1000000</span><span class="op">,</span> randomNum<span class="op">);</span></span>
+<span id="cb4-77"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-77" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Binary search: "</span> <span class="op">&lt;&lt;</span> binarySearchIndex <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb4-78"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-79" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-80"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="задача-3">4. Задача 3</h4>
+<p>Да се напише програма која влезната низа a ќе ја трансформира во
+излезна низа b на следниот начин: <span class="math display"><em>b</em><sub><em>i</em></sub> = <em>a</em><sub><em>i</em></sub> + <em>a</em><sub><em>n</em> − 1 − <em>i</em></sub></span></p>
+<p>Влезната низа 1 2 3 5 7 треба да се трансформира во 8 7 6 7 8.</p>
+<p>Објаснување: Бидејќи влезната низа a е со големина n, низата b ќе
+биде со иста големина. Трансформацијата се врши со парно собирање и
+замена на елементи. За секој пар елементи a[i] и a[n-1-i], каде што i се
+движи од [0 до n/2-1], нивниот збир е зачуван во b[i], додека a[i] се
+заменува со [n-1-i]. Ако n е непарен, средниот елемент a[n/2] се множи
+со 2.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb5-2"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
+<span id="cb5-4"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#define MAX </span><span class="dv">100</span></span>
+<span id="cb5-6"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> transform<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-8"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> j <span class="op">=</span> n <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> j<span class="op">;</span> i<span class="op">++,</span> j<span class="op">--)</span> <span class="op">{</span></span>
+<span id="cb5-9"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-9" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>i<span class="op">]</span> <span class="op">+=</span> arr<span class="op">[</span>j<span class="op">];</span></span>
+<span id="cb5-10"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-10" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-11"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-12"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">%</span> <span class="dv">2</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-14"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-14" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>n <span class="op">/</span> <span class="dv">2</span><span class="op">]</span> <span class="op">*=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-16"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-17"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> transformRecursive<span class="op">(</span><span class="dt">int</span> <span class="op">*</span>arr<span class="op">,</span> <span class="dt">int</span> start<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-19"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>start <span class="op">&gt;=</span> n<span class="op">/</span><span class="dv">2</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-20"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span><span class="op">)</span> <span class="op">{</span> </span>
+<span id="cb5-21"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="op">*(</span>arr <span class="op">+</span> n<span class="op">/</span><span class="dv">2</span><span class="op">)</span> <span class="op">*=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb5-22"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-23"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span><span class="op">;</span> </span>
+<span id="cb5-24"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-25"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> end <span class="op">=</span> n <span class="op">-</span> start <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> </span>
+<span id="cb5-27"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> tmp <span class="op">=</span> <span class="op">*(</span>arr <span class="op">+</span> start<span class="op">)</span> <span class="op">+</span> <span class="op">*(</span>arr <span class="op">+</span> end<span class="op">);</span></span>
+<span id="cb5-28"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">*(</span>arr <span class="op">+</span> start<span class="op">)</span> <span class="op">=</span> tmp<span class="op">;</span></span>
+<span id="cb5-29"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">*(</span>arr <span class="op">+</span> end<span class="op">)</span> <span class="op">=</span> tmp<span class="op">;</span></span>
+<span id="cb5-30"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-31" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">(</span>arr<span class="op">,</span> start <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> n<span class="op">);</span> </span>
+<span id="cb5-32"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-33"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-35"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n<span class="op">;</span></span>
+<span id="cb5-36"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> arr<span class="op">[</span>MAX<span class="op">];</span></span>
+<span id="cb5-37"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-38" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Enter the size of the array: "</span><span class="op">;</span></span>
+<span id="cb5-39"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-39" aria-hidden="true" tabindex="-1"></a>    cin <span class="op">&gt;&gt;</span> n<span class="op">;</span></span>
+<span id="cb5-40"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-41" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Enter the elements of the array: "</span><span class="op">;</span></span>
+<span id="cb5-42"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-43"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-43" aria-hidden="true" tabindex="-1"></a>        cin <span class="op">&gt;&gt;</span> arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-44"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-45"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">//transform(arr, n);</span></span>
+<span id="cb5-47"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-47" aria-hidden="true" tabindex="-1"></a>    transformRecursive<span class="op">(</span>arr<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> n<span class="op">);</span></span>
+<span id="cb5-48"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-49" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> <span class="st">"Transformed array: "</span><span class="op">;</span></span>
+<span id="cb5-50"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-51"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-51" aria-hidden="true" tabindex="-1"></a>        cout <span class="op">&lt;&lt;</span> arr<span class="op">[</span>i<span class="op">]</span> <span class="op">&lt;&lt;</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb5-52"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-53"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-53" aria-hidden="true" tabindex="-1"></a>    cout <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb5-54"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-56"><a href="https://finki-mk.github.io/SP_2023/mk/11.html#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+
+
+</body></html>
