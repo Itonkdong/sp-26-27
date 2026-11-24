@@ -22,5 +22,28 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int vector1[100];
+    int vector2[100];
+    int dimension;
+
+    cin >> dimension;
+
+    for (int i = 0; i < dimension; ++i)
+    {
+        cin >> vector1[i];
+    }
+
+    for (int i = 0; i < dimension; ++i)
+    {
+        cin >> vector2[i];
+    }
+
+    int dot_product = 0;
+
+    for (int i = 0; i < dimension; ++i)
+    {
+        dot_product += vector1[i] * vector2[i];
+    }
+
+    cout << "Dot product = " << dot_product;
 }

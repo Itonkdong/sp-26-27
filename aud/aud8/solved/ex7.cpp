@@ -23,5 +23,34 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int n;
+    cin >> n;
+    int array[100];
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> array[i];
+    }
+
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = i + 1; j < n; ++j)
+        {
+            if (array[i] == array[j])
+            {
+                for (int k = j; k < n - 1; ++k)
+                {
+                    array[k] = array[k + 1];
+                }
+                n--;
+                j--;
+            }
+        }
+    }
+
+    cout << "The new array is : " << endl;
+
+    for (int i = 0; i < n; ++i)
+    {
+        cout << array[i] << " ";
+    }
 }

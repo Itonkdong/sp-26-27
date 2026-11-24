@@ -30,5 +30,37 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int array[200];
+    int size;
+    cin >> size;
+
+    for (int i = 0; i < size; ++i)
+    {
+        cin >> array[i];
+    }
+
+    int number_odd = 0;
+    int number_even = 0;
+    int sum_odd = 0;
+    int sum_even = 0;
+
+    for (int i = 0; i < size; ++i)
+    {
+        if (array[i] % 2 == 0)
+        {
+            number_even++;
+            sum_even += array[i];
+        }
+        else
+        {
+            number_odd++;
+            sum_odd += array[i];
+        }
+    }
+
+    double ratio = number_even * 1.0 / number_odd;
+
+    cout << "Sum odd " << sum_odd << endl;
+    cout << "Sum even " << sum_even << endl;
+    cout << "Ratio " << ratio;
 }

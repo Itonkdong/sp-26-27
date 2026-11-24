@@ -22,5 +22,48 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int n;
+    cin >> n;
+
+    int array1[100];
+
+
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> array1[i];
+    }
+
+    bool increasing = true;
+
+    for (int i = 0; i < n - 1; ++i)
+    {
+        if (array1[i + 1] <= array1[i])
+        {
+            increasing = false;
+            break;;
+        }
+    }
+
+    bool decrease = true;
+    for (int i = 0; i < n - 1; ++i)
+    {
+        if (array1[i + 1] >= array1[i])
+        {
+            decrease = false;
+        }
+    }
+
+    if (increasing)
+    {
+        cout << "Increasing";
+        return 0;
+    }
+
+    if (decrease)
+    {
+        cout << "Decreasing";
+        return 0;
+    }
+
+    cout << "Nighter";
 }

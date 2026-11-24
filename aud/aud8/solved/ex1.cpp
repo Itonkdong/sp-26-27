@@ -24,5 +24,40 @@ using namespace std;
 
 int main()
 {
-    // TODO: Implement the exercise.
+    int a1[100];
+    int a2[100];
+
+
+    int size1;
+    int size2;
+
+    cin >> size1;
+    cin >> size2;
+
+    if (size1 != size2)
+    {
+        cout << "Not";
+        return 0;
+    }
+
+    for (int i = 0; i < size1; ++i)
+    {
+        cin >> a1[i];
+    }
+
+    for (int i = 0; i < size2; ++i)
+    {
+        cin >> a2[i];
+    }
+
+    for (int i = 0; i < size1; ++i)
+    {
+        if (a1[i] != a2[i])
+        {
+            cout << "Not";
+            return 0;
+        }
+    }
+
+    cout << "Yes";
 }
